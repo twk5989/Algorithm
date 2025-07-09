@@ -2,9 +2,10 @@
 
 def count_set(a,b,c): #함수정의
     count = 0 #갯수를 저장할 변수를 생성 및 초기화.처음이니까 0으로 초기화
-    # count += 1
+    
     if a > 0:
         count = count + 1
+        # count += 1
     if b > 0:
         count = count + 1
     if c > 0:
