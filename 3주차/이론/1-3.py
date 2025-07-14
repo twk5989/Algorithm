@@ -4,7 +4,7 @@ a = int(input('정수 a를 입력'))
 b = int(input('정수 b를 입력'))
 
 if a > b:
-    a, b=b, a
+    a, b=b, a 
     
 sum = 0
 

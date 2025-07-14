@@ -13,3 +13,5 @@ for _ in range(n): #0부터 n-1번째까지 반복하는거지 즉 n번 반복�
         count += 1 # count에 값을 1씩 늘린다
 
 print("양수 개수:", count)
+
+#예외처리 필요함
