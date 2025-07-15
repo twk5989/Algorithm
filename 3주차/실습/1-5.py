@@ -30,4 +30,4 @@ if not valid:
 else:
     print(f"{TW} = {result}")
     
-#쉼표 없애는 문제 보류
+#출력 값에 []사이에 ,(쉼표)가 생기는건 보류 나중에 해결
