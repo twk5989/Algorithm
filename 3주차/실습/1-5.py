@@ -29,3 +29,5 @@ if not valid:
     
 else:
     print(f"{TW} = {result}")
+    
+#쉼표 없애는 문제 보류
