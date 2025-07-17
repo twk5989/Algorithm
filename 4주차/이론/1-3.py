@@ -1,11 +1,12 @@
 #일반적인 직각 이등변 삼각형(왼쪽 아래가 직각)
 
 print('왼쪽 아래가 직각 이등변 삼각형을 출력')
+
 n = int(input('짧은 변의 길이를 입력'))
 
 for i in range(n):
     for j in range(i + 1):
-        print('*', end= '')
+        print('*', end= '') #end는 다음줄로 넘어가는걸 바로 옆에 출력 시키는것. 잊지말자.
     
     print()
     
