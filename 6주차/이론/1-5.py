@@ -6,16 +6,18 @@ def card_conv(x:int, r:int) -> str:
     dchar = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     n = len(str(x))       #변환하기 전의 자릿수
     
-    print(f'{r:2} | {x:{n}d}')
+    print(f'{r:2} | {x:{n}d}')  #R 뒤에 최소 2칸은 확보해서 나와라 한자리면 두칸에서 오른쪽 정렬되서 출력, N의 값을 받아 N자릿수만큼 공간을 확보해서 출력 뒤에 d가 붙는 이유는 10진수의 수로 보여주기 위해서
     while x > 0:
         print('  +' + (n + 2) * '-')
         
-        if x // r:
+        if x // r:  #나머지가 0이 아닐때 즉 더 나눌 값이 있을때
             print(f'{r:2} | {x // r:{n}d}.....{x % r}')
-        else:
+        else: #나머지가 0일때
             print(f'        {x // r:{n}d}.....{x % r}')
         d += dchar [x % r]
         x //= r
         
     return d[::-1] # 역순으로
         
+        #{} = 문자열 내부에 변수를 삽입하거나 그냥 대충 뭐 하려고 할때
+        #[] = 문자열 튜플 리스트 등에서 특정 요소에 접근을하거나 리스트를 만들때 사용
