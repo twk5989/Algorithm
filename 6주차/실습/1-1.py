@@ -19,6 +19,7 @@ def solution(A,B):
         
     else:
         max_val = common[0]
+        
         for i in range(1, len(common)): #근데 여기서 왜 0이 아니고 1로 시작을 했을까?
             if common[i] > max_val:
                 max_val = common[i]

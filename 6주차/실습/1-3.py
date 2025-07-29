@@ -23,6 +23,7 @@ def solution(dots):
     #TW = set()           #python의 내장형 함수 set을 사용해서 중복을 확인 TW에 하나씩 넣어보면서 확인하는 것이라네요
     
     for point in dots:
+        
         if len(point) != 2:
             print("각 점은 [x, y] 형식이어야 합니다.")
         x, y = point #

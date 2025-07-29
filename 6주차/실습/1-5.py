@@ -13,6 +13,7 @@ def card_conv(x:int, r:int) -> str: #정수형 x와 r을 문자열로 변환
     
     return d[::-1] #x가 0이 될때까지 무한 반복을하고 진수 출력을 위해 슬라이싱 문법으로 뒤집어서 출력시킴
 
+
 def count(numbers: list[int], base: int, uni: str) -> int: #최종적으로 정수형 값을 반환한다 ㅇㅋ?
     count = 0
     

@@ -4,7 +4,7 @@
 
 # 제한사항
 # 1 ≤ n ≤ 30
-
+ 
 
 def solution(n):
     if not isinstance(n, int):
