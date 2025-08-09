@@ -2,8 +2,9 @@
 
 def TW(a, b):
     i = 0
-    while i < len(a) and i < len(b) and a[i] == b[i]:
+    while i < len(a) and i < len(b) and a[i] == b[i]: #왜 이 조건을 이런식으로 적었는지 이해하는 시간을 가져보면 좋을 듯
         i += 1
+        
     return i + 1  # 마지막까지 같거나 다를 때 비교 한 번 더 필요함
 
 # 일단 단어의 갯수를 입력

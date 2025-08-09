@@ -15,8 +15,7 @@ score = 0
 
 for i in range(1, n+1):
     a = random.randint(1, 6)  
-    #randint는 random함수의 모듈에 있는 함수. 무작위로 범위내의 숫자를 출력하기 위해서는 random.randint를 사용해야함. random(1,6)이런거 안됌. 명시되어 있는 것
-
+    #randint는 random함수의 모듈에 있는 함수.
 if a == 6:
     score += 10
     print(f'{a}로 10점 획득')
