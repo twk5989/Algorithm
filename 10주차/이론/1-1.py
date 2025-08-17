@@ -31,52 +31,63 @@ class ChainedHash:
         return(int(hashlib.sha256(str(key).encode()).hexdigest(), 16) % self.capacity)
 
 # Do it! 실습 3-5[C]
+
+    #키가 key인 원소를 검색하여 값을 반환
     def search(self, key: Any) -> Any:
-        """키가 key인 원소를 검색하여 값을 반환"""
+
         hash = self.hash_value(key)  # 검색하는 키의 해시값
-        p = self.table[hash]         # 노드를 노드
+        
+        p = self.table[hash]
+        
 
         while p is not None:
+        #p가 None이 아닐때까지(연결되 노드가 없을때까지)
+        
             if p.key == key:
                  return p.value  # 검색 성공
-            p = p.next           # 뒤쪽 노드를 주목
+             
+            p = p.next           # 다르다면 뒤에 노드를 봄
 
-        return None              # 검색 실패
+        return None              # 결국 찾지못하면 실패
 
+
+    # 키가 key이고 값이 value인 원소를 삽입
     def add(self, key: Any, value: Any) -> bool:
-        """키가 key이고 값이 value인 원소를 삽입"""
-        hash = self.hash_value(key)  # 삽입하는 키의 해시값
-        p = self.table[hash]         # 주목하는 노드
+        
+        hash = self.hash_value(key)  
+        p = self.table[hash]         
 
         while p is not None:
             if p.key == key:
-                return False         # 삽입 실패
-            p = p.next               # 뒤쪽 노드에 주목
+                return False         
+            p = p.next               
 
         temp = Node(key, value, self.table[hash])
-        self.table[hash] = temp      # 노드를 삽입
-        return True                  # 삽입 성공
+        self.table[hash] = temp     
+        return True                  
 
-# Do it! 실습 3-5[D]
+    #키가 key인 원소를 삭제
+    
     def remove(self, key: Any) -> bool:
         """키가 key인 원소를 삭제"""
-        hash = self.hash_value(key)  # 삭제할 키의 해시값
-        p = self.table[hash]         # 주목하고 있는 노드
-        pp = None                    # 바로 앞 주목 노드
+        hash = self.hash_value(key)
+        p = self.table[hash]        
+        pp = None                    
 
         while p is not None:
-            if p.key == key:  # key를 발견하면 아래를 실행
+            if p.key == key:  
                 if pp is None:
                     self.table[hash] = p.next
                 else:
                     pp.next = p.next
-                return True  # key 삭제 성공
+                return True  
             pp = p
-            p = p.next       # 뒤쪽 노드에 주목
-        return False         # 삭제 실패(key가 존재하지 않음)
+            p = p.next      
+        return False         
 
+    #해시 테이블을 덤프
+    
     def dump(self) -> None:
-        """해시 테이블을 덤프"""
         for i in range(self.capacity):
             p = self.table[i]
             print(i, end='')
