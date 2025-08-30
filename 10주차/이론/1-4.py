@@ -1,4 +1,4 @@
-# [Do it! 실습 3-8] 오픈 주소법을 구현하는 해시 클래스 OpenHash 사용
+#오픈 주소법을 구현하는 해시 클래스 OpenHash 사용
 
 from enum import Enum
 from open_hash import OpenHash

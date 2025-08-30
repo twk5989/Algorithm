@@ -1,4 +1,4 @@
-# [Do it! 실습 3-6] 체인법을 구현하는 해시 클래스 ChainedHash의 사용
+# 체인법을 구현하는 해시 클래스 ChainedHash의 사용
 
 from enum import Enum
 from chained_hash import ChainedHash

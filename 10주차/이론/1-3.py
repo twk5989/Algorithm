@@ -1,4 +1,4 @@
-# Do it! 실습 3-7 오픈 주소법으로 해시함수 구현하기
+#오픈 주소법으로 해시함수 구현하기
 
 from __future__ import annotations
 from typing import Any, Type

@@ -30,7 +30,6 @@ class ChainedHash:
             return key % self.capacity
         return(int(hashlib.sha256(str(key).encode()).hexdigest(), 16) % self.capacity)
 
-# Do it! 실습 3-5[C]
 
     #키가 key인 원소를 검색하여 값을 반환
     def search(self, key: Any) -> Any:
