@@ -7,13 +7,13 @@ def solution():
 
     stack = []        # 스택 역할을 할 리스트
     result = []       # 연산 결과 (+, -)를 저장할 리스트
-    c = 1   
+    c = 1   #푸시를 할 시작점
 
    
     for num in tw:
         
-        # 아직 목표 숫자(num)까지 스택에 넣지 않았다면
-        while c < num:
+        # 아직 목표 숫자까지 스택에 넣지 않았다면은
+        while c <= num:
             stack.append(c)   
             result.append("+")      
             c += 1        
@@ -25,5 +25,7 @@ def solution():
             
         else:
             # 스택 top이 내가 원하는 숫자랑 다르면 만들수가 업브음
+            print("No")
             break
-
+        
+    print("/n".join(result))
