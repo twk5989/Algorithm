@@ -18,11 +18,11 @@ def solution(schedules, timelogs, startday):
     
     
     
-    for i in range(len(schedules)): #n을 적어도 상관없지
+    for i in range(len(schedules)): #n을 적어도 상관없지.사람의 수 만큼 반복하는거니까
         
         for d in range(7):
             
-            day = (startday - 1 + d) % 7 + 1 
+            day = (startday - 1 + d) % 7 + 1 #이거는 좀 빡세네. 내가 이렇게 했다고??
             
             if day in (6, 7):
                 continue
@@ -69,6 +69,7 @@ def solution(schedules, timelogs, startday):
                 
         if tw == True:
             answer += 1
+            
         startday = st #다음사람 검사해야하니 초기화
         
     return answer

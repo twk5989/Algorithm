@@ -8,11 +8,12 @@ def solution():
     stack = []        # 스택 역할을 할 리스트
     result = []       # 연산 결과 (+, -)를 저장할 리스트
     c = 1   #푸시를 할 시작점
-
+    
+#[1,2,3,4,5,6,7,8] = stack[4,3,6,8,1,3,7]
    
     for num in tw:
         
-        # 아직 목표 숫자까지 스택에 넣지 않았다면은
+        # 아직 목표 숫자까지 스택에 넣지 않았다면은(num이 목표 숫자겠지?)
         while c <= num:
             stack.append(c)   
             result.append("+")      
@@ -28,4 +29,5 @@ def solution():
             print("No")
             break
         
-    print("/n".join(result))
+    print("\n".join(result))
+    ["+", "-", "-","-","-","-","-"]
