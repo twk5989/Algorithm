@@ -10,7 +10,7 @@ def solution(n):
             
             return #끝난거지
         
-        move(no - 1, x, 6 - x - y)   #move(1,1,2)
+        move(no - 1, x, 6 - x - y)   #move(1,1,2)-> (0.1.3)->(0.2.3)
         
         answer.append([x, y])       
         
